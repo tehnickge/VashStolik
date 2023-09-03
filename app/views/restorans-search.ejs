@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/nav.ejs") %>
+
+    <div style="
+    align-items: center;
+    margin: auto;
+    ">
+        <h1 style="
+            position: relative;
+            margin: auto;
+            align-items: center;
+            text-align: center;">
+            <%= title %>
+        </h1>
+    </div>
+    <div>
+    </div>
+    <script>
+        var jqxhr = $.get( "http://localhost:3000/api/restorans/", function() {
+            console.log(jqxhr.responseJSON);
+           let dataObject = jqxhr.responseJSON;
+           console.log(dataObject.adress); 
+        });
+    </script>
+    <%- include('./partials/link.ejs') %>
+</body>
+</html>
