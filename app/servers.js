@@ -69,4 +69,3 @@ app.use((req, res) => {
     .status(404)
     .render(createPath('error'), { title });
 });
-
