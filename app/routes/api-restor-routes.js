@@ -4,9 +4,9 @@ const router = express.Router();
 
 
 router.get('/api/restorans', (req, res) => {
-    const restoran = {
+    const restoran = [{
         id: '1',
-        name: `restorn`,
+        name: `restorn-abobika`,
         groupCompany: `McDonald`,
         adress: {
             country: '', //
@@ -36,7 +36,7 @@ router.get('/api/restorans', (req, res) => {
             typeTwo: false,
             typeThree: false
         }
-    }
+    }]
     res.send(restoran);
 });
 
