@@ -27,6 +27,10 @@ router.get('/api/restorans', (req, res) => {
             { id:'3', available: true, parameters: { x1: '12', y1: '30', x2: '22', y2: '42' }, available_date: [ '2023-05-01:00:00', '2023-06-01:00:00', '2023-05-01:00']},
             { id:'4', available: true, parameters: { x1: '25', y1: '30', x2: '30', y2: '42' }, available_date: [ '2023-05-01:00:00', '2023-06-01:00:00', '2023-05-01:00']},
         ],
+        images: [
+            {number: '1', url: 'https://sun9-43.userapi.com/impg/tLrT3RzmXDeAsAWRQkHK5zgjx33eD4fWKRq8VQ/jMHAa4CCjdQ.jpg?size=1000x1080&quality=95&sign=304e11ce055524993ca71a39761a769c&type=album'},
+            {number: '2', url: 'https://sun9-37.userapi.com/impg/WTFzZrRYlB0DuFveeMwRHkoXBdmtM4i_m6VgJg/Xp-u2iSnrFM.jpg?size=1280x1280&quality=95&sign=250e220c7484b1c0050b50b7e19176cd&type=album'}
+        ],
         typeRent: {
             typeOne: true,
             typeTwo: false,
