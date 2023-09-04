@@ -16,7 +16,6 @@
         </h1>
     </div>
     <div class="main-container">
-        <div class="test"></div>
     </div>
     
     <script>
@@ -27,7 +26,7 @@
                 $('.main-container').append(`<div class="container-restaurant" data-id="${dataObject[i].id}">${i}</div>`);
                 $('.main-container').append((`<h1>${dataObject[i].name}</h1>`));
                 for(let j = 0; j < dataObject[i].tables.length; j++) {
-                    
+                    $('.main-container').append('')
                     
                 }
             }
