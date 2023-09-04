@@ -16,7 +16,8 @@
             <%= title %>
         </h1>
     </div>
-    <div>
+    <div class="main-container">
+
     </div>
     
     <script>
@@ -25,8 +26,8 @@
            let dataObject = allRest.responseJSON;
            for(let i = 0; i < dataObject.tables.length; i++) {
             console.log(dataObject.tables[i]);
+            $('.main-container').append(($`<h1>${dataObject.tables[i]}</h1>`))
            }
-           
         });
     </script>
     <%- include('./partials/link.ejs') %>
