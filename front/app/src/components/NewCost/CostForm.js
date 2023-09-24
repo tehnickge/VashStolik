@@ -3,23 +3,56 @@ import "./CostForm.css"
 
 const CostForm = () => {
 
-    const [name, setName] = useState("");
-    const [amount, setAmount] = useState("");
-    const [date, setDate] = useState("2022-01-01");
+    // const [name, setName] = useState("");
+    // const [amount, setAmount] = useState("");
+    // const [date, setDate] = useState("2022-01-01");
+    const [userInput, setUserInput] = useState({
+        name: '',
+        amount: '',
+        date: ''
+    })
 
     const nameChangeHandler = (event) => {
-        setName(event.target.value);
-        console.log(name);
+        // setName(event.target.value);
+        // setUserInput({
+        //     ...userInput,
+        //     name: event.target.value,
+        // })
+        setUserInput((previosState) => {
+            return {
+                ...previosState,
+                name: event.target.value
+            }
+        })
+        console.log(userInput.name);
     }
 
     const amountChangeHandler = (event) => {
-        setAmount(event.target.value);
-        console.log(amount);
+        // setUserInput({
+        //     ...setUserInput,
+        //     amount: event.target.value
+        // });
+        setUserInput((previosState) => {
+            return {
+                ...previosState,
+                amount: event.target.value
+            }
+        })
+        console.log(userInput.amount);
     }
 
     const dateChangeHandler = (event) => {
-        setDate(event.target.value);
-        console.log(date);
+        // setUserInput({
+        //     ...userInput,
+        //     date: event.target.value
+        // });
+        setUserInput((previosState) => {
+            return {
+                ...previosState,
+                date: event.target.value
+            }
+        })
+        console.log(userInput.date);
     }
 
     return(
