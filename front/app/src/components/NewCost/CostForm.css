@@ -4,6 +4,9 @@
     gap: 1rem;
     margin-bottom: 1rem;
     text-align: left;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
   }
   
   .new-cost__control label {
