@@ -12,37 +12,31 @@ const Costs = (props) => {
     console.log(year);
     console.log("From Cost");
     setSelectedYear(year);
+  };
 
-  }
+  const filteredCoasts = props.costs.filter(cost => {
+    if (selectedYear !== "all") {
+      return cost.date.getFullYear().toString() === selectedYear;
+    } else {
+      return cost
+    }
+  });
 
-return (
-  <div>
-    <Card className="costs">
-    <CostFilter year={selectedYear} onChangeYear={yearChangeHandler}/>
-    { props.costs.map((cost) => (<CostItem
-      date={cost.date}
-      description={cost.costDiscprition}
-      amount={cost.costAmount}
-      />
-      ))}
-      <CostItem
-        date={props.costs[0].date}
-        description={props.costs[0].costDiscprition}
-        amount={props.costs[0].costAmount}
-      />
-      <CostItem
-        date={props.costs[1].date}
-        description={props.costs[1].costDiscprition}
-        amount={props.costs[1].costAmount}
-      />
-      <CostItem
-        date={props.costs[2].date}
-        description={props.costs[2].costDiscprition}
-        amount={props.costs[2].costAmount}
-      />
-    </Card>
-  </div>
-);
+  return (
+    <div>
+      <Card className="costs">
+        <CostFilter year={selectedYear} onChangeYear={yearChangeHandler} />
+        {filteredCoasts.length === 0 ? (<p>в этом году нет затрат</p>) : (
+          filteredCoasts.map((cost) => (<CostItem
+            key={cost.id}
+            date={cost.date}
+            description={cost.description}
+            amount={cost.amount}
+          />
+          )))}
+      </Card>
+    </div>
+  );
 }
 
 export default Costs;

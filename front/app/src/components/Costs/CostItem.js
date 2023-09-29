@@ -3,9 +3,6 @@ import CostDate from "./CostDate";
 import Card from "../UI/Card";
 
 const CostItem = (props) => {
-
-
-
   return (
     <Card className="cost-item">
       <div>

@@ -64,7 +64,7 @@ const CostForm = (props) => {
     const submitHandler = (event) => {
         event.preventDefault();
         const costData = {
-            name: inputName,
+            description: inputName,
             amount: inputAmount,
             date: new Date(inputDate)
         }
@@ -74,12 +74,12 @@ const CostForm = (props) => {
         setInputDate('2022-01-01');
     };
 
-    return(
+    return (
         <form onSubmit={submitHandler}>
             <div className="new-cost__controls">
                 <div className="new-cost__control">
                     <label>название</label>
-                    <input type="text" value={inputName} onChange={nameChangeHandler}/>
+                    <input type="text" value={inputName} onChange={nameChangeHandler} />
                 </div>
                 <div className="new-cost__control">
                     <label>сумма</label>
@@ -87,7 +87,7 @@ const CostForm = (props) => {
                 </div>
                 <div className="new-cost__control">
                     <label>дата</label>
-                    <input type="date" min='2019-01-01' step="2024-03-02" value={inputDate} onChange={dateChangeHandler}/>
+                    <input type="date" min='2019-01-01' step="2024-03-02" value={inputDate} onChange={dateChangeHandler} />
                 </div>
             </div>
             <div className=".new-cost__actions">
