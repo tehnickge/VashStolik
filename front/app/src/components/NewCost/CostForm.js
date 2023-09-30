@@ -74,6 +74,10 @@ const CostForm = (props) => {
         setInputDate('2022-01-01');
     };
 
+    const cancelHandler = (event) => {
+        props.onCancel();
+    }; 
+
     return (
         <form onSubmit={submitHandler}>
             <div className="new-cost__controls">
@@ -91,10 +95,11 @@ const CostForm = (props) => {
                 </div>
             </div>
             <div className=".new-cost__actions">
+                <button type="button" onClick={cancelHandler}>отмена</button>
                 <button type="submit">Добавить</button>
             </div>
         </form>
     )
 }
 
-export default CostForm
+export default CostForm;

@@ -5,20 +5,32 @@ import React, { useState } from 'react'
 const INITIAL_COST = [
   {
     id: "C1",
-    date: new Date(2022, 4, 13),
-    amount: 439.992,
+    date: new Date(2022, 1, 13),
+    amount: 439,
     description: "Жопа",
   },
   {
     id: "C2",
-    date: new Date(2021, 5, 12),
-    amount: 95499.99,
+    date: new Date(2021, 2, 12),
+    amount: 154,
     description: "пися",
   },
   {
     id: "C3",
-    date: new Date(2019, 7, 12),
-    amount: 2999.99,
+    date: new Date(2019, 1, 12),
+    amount: 299,
+    description: "сака",
+  },
+  {
+    id: "C4",
+    date: new Date(2021, 2, 12),
+    amount: 93,
+    description: "пися",
+  },
+  {
+    id: "C5",
+    date: new Date(2019, 10, 12),
+    amount: 500,
     description: "сака",
   },
 ];
